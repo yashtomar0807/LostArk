@@ -202,31 +202,31 @@
                 <h2 style="text-align: center;">Ready to Transform Your Curriculum?</h2>
                 <p style="text-align: center; margin-bottom: 2rem;">Schedule a consultation to see how we can empower your classrooms for the AI-driven future.</p>
                 
-                <form action="#" method="POST">
+                <form action="/submit" method="POST">
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                         <div class="form-group">
                             <label for="fname">First Name</label>
-                            <input type="text" id="fname" class="form-control" required>
+                            <input type="text" id="fname" name="fname" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="lname">Last Name</label>
-                            <input type="text" id="lname" class="form-control" required>
+                            <input type="text" id="lname" name="lname" class="form-control" required>
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label for="school">School / Institution Name</label>
-                        <input type="text" id="school" class="form-control" required>
+                        <input type="text" id="school" name="school" class="form-control" required>
                     </div>
 
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                         <div class="form-group">
                             <label for="email">Work Email</label>
-                            <input type="email" id="email" class="form-control" required>
+                            <input type="email" id="email" name="email" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="role">Your Role</label>
-                            <select id="role" class="form-control" required>
+                            <select id="role" name="role" class="form-control" required>
                                 <option value="" disabled selected>Select Role</option>
                                 <option value="principal">Principal</option>
                                 <option value="director">Director</option>
@@ -238,7 +238,7 @@
 
                     <div class="form-group">
                         <label for="message">Tell us about your current tech programs (Optional)</label>
-                        <textarea id="message" class="form-control"></textarea>
+                        <textarea id="message" name="message" class="form-control"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-submit">Request Free Pilot Consultation</button>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success | EdTech Partner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--bg-dark), #0d0d18);
+        }
+        .success-card {
+            background: var(--bg-card);
+            padding: 4rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(0, 210, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            width: 100%;
+        }
+        .success-icon {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-card reveal">
+        <div class="success-icon">✓</div>
+        <h1>Thank You!</h1>
+        <p>booked consulation , you will receive an email from our side</p>
+        <a href="/" class="btn btn-primary">Return to Home</a>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach((reveal) => {
+                reveal.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
