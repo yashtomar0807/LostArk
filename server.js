@@ -13,7 +13,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/')));
 
 // Database setup (SQLite)
-const db = new sqlite3.Database('./leads.db', (err) => {
+// Vercel serverless functions have a read-only filesystem except for /tmp
+const dbPath = process.env.VERCEL ? '/tmp/leads.db' : './leads.db';
+const db = new sqlite3.Database(dbPath, (err) => {
     if (err) {
         console.error('Error connecting to database:', err.message);
     } else {
